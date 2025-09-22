@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* rolar, mas sem mostrar a barra */
+body {
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: 'Codec Pro ExtraBold';
+  src: url('fonts/CodecPro-ExtraBold.woff2') format('woff2'),
+       url('fonts/CodecPro-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+section {
+  padding: 0 4rem;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  scroll-behavior: smooth;
+  background: url('./jh.png') repeat center center fixed;
+  background-size: cover;
+  font-family: 'Codec Pro ExtraBold', sans-serif;
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  display: block;
+  margin-bottom: 140px;
+  margin-left: 20px;
+}
+
+.logomarca {
+  width: 100px;
+  margin-right: 200px;
+}
+
+.hero {
+  margin-top: 40px;
+  margin-left: 80px;
+  margin-bottom: 160px;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #ffffff;
+  color: black;
+  padding: 12px 15px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #6A0DAD;
+  color: #ffffff;
+  border: solid 1px #ffffff;
+}
+
+.sobre {
+  margin-top: 200px;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin: 20px 0;
+}
+
+p {
+  display: flex;
+  margin: 0 6.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.contato {
+  margin-top: 140px;
+  display: flex;
+  height: 400px;
+}
+
+.contato p {
+  font-size: 0.8rem;
+}
+
+.ladoEsquerdo {
+  width: 600px;
+  margin-top: 50px;
+  padding-right: 0;
+  height: 200px;
+}
+
+.ladoDireito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  margin-bottom: 120px;
+  height: 220px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  width: 30px;
+}
