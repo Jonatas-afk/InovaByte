@@ -6,10 +6,46 @@
   <title>InovaByte</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <style>
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 400px;
+  background: transparent;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.7);
+}
+.form-container label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
+}
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 16px;
+  border: 1px solid #B197FC;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.form-container button {
+  background: #B197FC;
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.form-container button:hover {
+  background: #5d45b2;
+}
+</style>
 </head>
 <body>
   <section>
@@ -79,6 +115,54 @@
       <br>
       <br>
   </section>
+
+  <section class="cargos">
+    <h3>Sobre as vagas disponíveis</h3>
+
+    <img src="/Cargos/analista de suporte técnico (1).png">
+    <img src="/Cargos/desenvolvedor(a) back-end júnior (1).png">
+    <img src="/Cargos/Desenvolvedor(a) Web Júnior (1).png">
+    <img src="/Cargos/estagiário(a) de QA (1).png">
+    <img src="/Cargos/UX UI Designer (1).png">
+  </section>
+
+  <section>
+    <h3 style="text-align:center;">Trabalhe Conosco</h3>
+    <form class="form-container" id="formTrabalheConosco" action="/enviar" method="POST">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phoneNumber">Telefone:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="^\+\d{1,3}\s?\d{2}\s?\d{4,5}-?\d{4}$" placeholder="+99 99 99999-9999" required>
+
+        <label for="cargo">Cargo Pretendido:</label>
+        <select id="cargo" name="cargo" required>
+            <option value="">Selecione...</option>
+            <option value="ux-ui-designer">UX UI Designer</option>
+            <option value="dev-backend-junior">Desenvolvedor(a) back-end júnior</option>
+            <option value="estagiario-qa">Estagiário(a) de QA</option>
+            <option value="dev-web-junior">Desenvolvedor(a) Web Júnior</option>
+            <option value="analista-suporte">Analista de suporte técnico</option>
+        </select>
+
+        <label for="salario">Pretenção Salarial:</label>
+        <input type="text" id="salario" name="salario" required>
+
+        <label for="disponibilidade">Disponibilidade:</label>
+        <select id="disponibilidade" name="disponibilidade" required>
+            <option value="">Selecione...</option>
+            <option value="home-office">Home Office</option>
+            <option value="presencial">Presencial</option>
+            <option value="hibrido">Híbrido</option>
+        </select>
+
+        <button type="submit">Enviar</button>
+    </form>
+  </section>
+
     
   <section class="footer">
   <!-- Contato -->
@@ -93,7 +177,7 @@
     (12) 3456-7890<br>
 
     Praça Padre Raimindo, s/n, Centro,<br> Vargem Linda (São Domingos do Prata), Minas Gerais- CEP 35998971
-  </p> 
+  </p>
   <br>
   <br>
 
@@ -107,5 +191,13 @@
     </div>
   </div>
   </section>
+
+  <script>
+document.getElementById('formTrabalheConosco').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Formulário enviado com sucesso!');
+  this.reset();
+});
+</script>
 </body>
 </html>

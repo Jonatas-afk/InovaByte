@@ -28,6 +28,7 @@ body::-webkit-scrollbar {
 
 section {
   padding: 0 4rem;
+  margin-bottom: 3rem;
   height: 100%;
   width: 100%;
 }
@@ -136,4 +137,21 @@ p {
   text-align: center;
   height: auto;
   width: 30px;
+}
+
+.cargos {
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.cargos h3 {
+  display: block;
+  text-align: center;
+}
+
+.cargos img{
+  height: auto;
+  width: 210px;
+  
 }
